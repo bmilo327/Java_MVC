@@ -28,9 +28,7 @@ public class Filmek {
     }
 
     public List<Film> getFilmek() {
-        /*return Collections.unmodifiableList(filmek);*/
-        List<Film> masolat = new ArrayList<>(filmek);
-        return masolat;
+        return Collections.unmodifiableList(filmek);
     }
     
     public void felvesz(Film film) {
