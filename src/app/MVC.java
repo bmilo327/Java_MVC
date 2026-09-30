@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package main;
+package app;
 
-import java.util.List;
+import modell.Filmek;
+import nezet.KonzolNezet;
 
 /**
  *
@@ -16,7 +17,7 @@ public class MVC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
+       new KonzolNezet(new Filmek()).megjelenit();
     }
     
 }

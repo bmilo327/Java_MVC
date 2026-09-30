@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package main;
+package nezet;
+
+import modell.Film;
+import modell.Filmek;
 
 /**
  *
@@ -11,13 +14,13 @@ package main;
 public class KonzolNezet {
     private Filmek modell;
 
-    public KonzolNezet() {
+    public KonzolNezet(Filmek filmek) {
         this.modell = modell;
     }
     
     
     
-    private void megjelenit(){
+    public void megjelenit(){
         for (Film film : modell.getFilmek()) {
             System.out.println(film);
         }
