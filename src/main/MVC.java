@@ -16,21 +16,7 @@ public class MVC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Filmek filmek = new Filmek();
-        
-        List<Film> modosithatoFilmek = filmek.getFilmek();
-        for (Film film : modosithatoFilmek) {
-            System.out.println("film = " + film);
-        }
-        
-        modosithatoFilmek.add(new Film("Nem jó!"));
-        
-        
-        System.out.println("eredeti filmek: ");
-        List<Film> eredetiFilmek = filmek.getFilmek();
-        for (Film film : eredetiFilmek) {
-            System.out.println("film = " + film);
-        }
+       
     }
     
 }
