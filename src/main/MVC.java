@@ -4,6 +4,8 @@
  */
 package main;
 
+import java.util.List;
+
 /**
  *
  * @author BernáthMilán(SZF_N_2
@@ -14,7 +16,21 @@ public class MVC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Film film1 = new Film("Eredet", "Sci-Fi", 2010, "Christopher Nolan", "Warner Bros. Pictures", 148);
+        Filmek filmek = new Filmek();
+        
+        List<Film> modosithatoFilmek = filmek.getFilmek();
+        for (Film film : modosithatoFilmek) {
+            System.out.println("film = " + film);
+        }
+        
+        modosithatoFilmek.add(new Film("Nem jó!"));
+        
+        
+        System.out.println("eredeti filmek: ");
+        List<Film> eredetiFilmek = filmek.getFilmek();
+        for (Film film : eredetiFilmek) {
+            System.out.println("film = " + film);
+        }
     }
     
 }

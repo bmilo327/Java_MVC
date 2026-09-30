@@ -15,7 +15,10 @@ public class Film {
     private String rendezo;
     private String kiado;
     private int filmHossz;
-    
+
+    public Film(String cim) {
+        this.cim = cim;
+    }
     
     public Film(String cim, String kategoria, int megjelenesiDatum, String rendezo, String kiado, int filmHossz) {
         this.cim = cim;
@@ -48,9 +51,12 @@ public class Film {
 
     public int getFilmHossz() {
         return filmHossz;
-    }
+    }  
 
-    
+    @Override
+    public String toString() {
+        return "Film{" + "cim=" + cim + ", kategoria=" + kategoria + ", megjelenesiDatum=" + megjelenesiDatum + ", rendezo=" + rendezo + ", kiado=" + kiado + ", filmHossz=" + filmHossz + '}';
+    }
     
     
     
