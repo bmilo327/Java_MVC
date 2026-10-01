@@ -14,7 +14,7 @@ import modell.Filmek;
 public class KonzolNezet {
     private Filmek modell;
 
-    public KonzolNezet(Filmek filmek) {
+    public KonzolNezet(Filmek modell) {
         this.modell = modell;
     }
     
@@ -22,7 +22,7 @@ public class KonzolNezet {
     
     public void megjelenit(){
         for (Film film : modell.getFilmek()) {
-            System.out.println(film);
+            System.out.println();
         }
     }
     

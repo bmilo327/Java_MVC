@@ -6,6 +6,7 @@ package app;
 
 import modell.Filmek;
 import nezet.KonzolNezet;
+import nezet.TablazatNezet;
 
 /**
  *
@@ -17,7 +18,8 @@ public class MVC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       new KonzolNezet(new Filmek()).megjelenit();
+//       new KonzolNezet(new Filmek()).megjelenit();
+       new TablazatNezet(new Filmek()).megjelenit();
     }
     
 }

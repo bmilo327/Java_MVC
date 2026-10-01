@@ -15,10 +15,6 @@ public class Film {
     private String rendezo;
     private String kiado;
     private int filmHossz;
-
-    public Film(String cim) {
-        this.cim = cim;
-    }
     
     public Film(String cim, String kategoria, int megjelenesiDatum, String rendezo, String kiado, int filmHossz) {
         this.cim = cim;
