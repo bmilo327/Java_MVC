@@ -18,8 +18,9 @@ public class MVC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//       new KonzolNezet(new Filmek()).megjelenit();
-       new TablazatNezet(new Filmek()).megjelenit();
+        Filmek modell = new Filmek();
+        new KonzolNezet(modell).megjelenit();
+        new TablazatNezet(modell).megjelenit();
     }
     
 }

@@ -22,7 +22,7 @@ public class KonzolNezet {
     
     public void megjelenit(){
         for (Film film : modell.getFilmek()) {
-            System.out.println();
+            System.out.println(film);
         }
     }
     
