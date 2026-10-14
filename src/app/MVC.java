@@ -12,6 +12,7 @@ import nezet.HtmlNezet;
 import nezet.KonzolNezet;
 import nezet.TablazatNezet;
 import nezet.TxtNezet;
+import vezerlo.Controller;
 
 /**
  *
@@ -24,12 +25,14 @@ public class MVC {
      */
     public static void main(String[] args) throws IOException {
         Filmek modell = new Filmek();
-        new KonzolNezet(modell).megjelenit();
-        new TablazatNezet(modell).megjelenit();
-        new TxtNezet(modell).megjelenit();
+        KonzolNezet view = new KonzolNezet();
+//        new TablazatNezet(modell).megjelenit();
+//        new TxtNezet(modell).megjelenit();
         
 //        String s = new HtmlNezet(modell).megjelenit();
 //        Files.writeString(Path.of("filmek.html"), s);
+
+        Controller controller = new Controller(modell, view);
     }
     
 }

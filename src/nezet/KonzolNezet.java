@@ -11,19 +11,9 @@ import modell.Filmek;
  *
  * @author BernáthMilán(SZF_N_2
  */
-public class KonzolNezet {
-    private Filmek modell;
-
-    public KonzolNezet(Filmek modell) {
-        this.modell = modell;
-    }
-    
-    
-    
-    public void megjelenit(){
-        for (Film film : modell.getFilmek()) {
-            System.out.println(film);
-        }
+public class KonzolNezet { 
+    public void megjelenit(String uzenet){
+        System.out.println(uzenet);
     }
     
 }
