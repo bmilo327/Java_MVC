@@ -28,5 +28,9 @@ public class Controller {
         }
     }
     
+    public void leghosszabbFilmCime() {
+        konzolNezet.megjelenit("még meg kell keresni");
+    }
+    
     
 }

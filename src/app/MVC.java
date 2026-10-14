@@ -33,7 +33,11 @@ public class MVC {
 //        Files.writeString(Path.of("filmek.html"), s);
 
         Controller controller = new Controller(modell, view);
+        System.out.println("Filmek:");
         controller.osszesFilmKiirasa();
+        
+        System.out.println("A leghosszabb film címe:");
+        controller.leghosszabbFilmCime();
     }
     
 }
