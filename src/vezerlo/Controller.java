@@ -19,14 +19,12 @@ public class Controller {
     public Controller(Filmek filmek, KonzolNezet konzolNezet) {
         this.filmek = filmek;
         this.konzolNezet = konzolNezet;
-    
-        osszesFilmKiirasa(filmek, konzolNezet);
     }
 
-    private void osszesFilmKiirasa(Filmek filmek, KonzolNezet konzolNezet1) {
+    public void osszesFilmKiirasa() {
         for (Film film : filmek.getFilmek()) {
             String uzenet = "A film adatai: " + film;
-            konzolNezet1.megjelenit(uzenet);
+            konzolNezet.megjelenit(uzenet);
         }
     }
     

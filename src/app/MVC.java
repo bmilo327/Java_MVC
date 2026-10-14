@@ -33,6 +33,7 @@ public class MVC {
 //        Files.writeString(Path.of("filmek.html"), s);
 
         Controller controller = new Controller(modell, view);
+        controller.osszesFilmKiirasa();
     }
     
 }
