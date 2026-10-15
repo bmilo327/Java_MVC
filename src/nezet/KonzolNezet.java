@@ -4,16 +4,37 @@
  */
 package nezet;
 
+
+import java.util.List;
 import modell.Film;
-import modell.Filmek;
 
 /**
  *
  * @author BernáthMilán(SZF_N_2
  */
-public class KonzolNezet { 
-    public void megjelenit(String uzenet){
-        System.out.println(uzenet);
+public class KonzolNezet extends Nezet { 
+    @Override
+    public void megjelenit(List<Film> filmLista) {
+        osszesFilmMegjelenit(filmLista);
+        leghosszabbFilmCimeMegjelenit(filmLista);
     }
-    
+
+    private void leghosszabbFilmCimeMegjelenit(List<Film> filmLista) {
+        Film leghosszabbFilm = filmLista.get(0);
+        String adat = "";
+        for (int i = 1; i < filmLista.size(); i++) {
+            if (filmLista.get(i).getFilmHossz() > leghosszabbFilm.getFilmHossz()) {
+                leghosszabbFilm = filmLista.get(i);
+                
+            }
+        }
+        adat = leghosszabbFilm.getCim();
+        System.out.println("A leghosszabb film címe: " + adat);
+    }
+
+    private void osszesFilmMegjelenit(List<Film> filmLista) {
+        for (Film film : filmLista) {
+            System.out.println("A film adatai: " + film);
+        }
+    }
 }

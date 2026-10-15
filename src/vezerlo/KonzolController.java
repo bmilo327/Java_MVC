@@ -4,33 +4,23 @@
  */
 package vezerlo;
 
+import java.util.List;
 import modell.Film;
 import modell.Filmek;
-import nezet.KonzolNezet;
+import nezet.Nezet;
 
 /**
  *
  * @author BernáthMilán(SZF_N_2
  */
-public class KonzolController {
-    private Filmek filmek;
-    private KonzolNezet konzolNezet;
+public class KonzolController extends Controller {
+    List<Film> filmLista = filmek.getFilmek();
+    public KonzolController(Filmek filmek, Nezet nezet) {
+        super(filmek, nezet);
+    }
+    
 
-    public KonzolController(Filmek filmek, KonzolNezet konzolNezet) {
-        this.filmek = filmek;
-        this.konzolNezet = konzolNezet;
-    }
-
-    public void osszesFilmKiirasa() {
-        for (Film film : filmek.getFilmek()) {
-            String uzenet = "A film adatai: " + film;
-            konzolNezet.megjelenit(uzenet);
-        }
-    }
-    
-    public void leghosszabbFilmCime() {
-        konzolNezet.megjelenit("még meg kell keresni");
-    }
-    
-    
+    public void filmMegjelenit() {
+        nezet.megjelenit(filmLista);  
+    }    
 }

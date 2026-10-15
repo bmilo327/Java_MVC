@@ -14,6 +14,7 @@ import nezet.TablazatNezet;
 import nezet.TxtNezet;
 import vezerlo.KonzolController;
 import vezerlo.TablazatController;
+import nezet.Nezet;
 
 /**
  *
@@ -26,23 +27,22 @@ public class MVC {
      */
     public static void main(String[] args) throws IOException {
         Filmek modell = new Filmek();
-        TablazatNezet view = new TablazatNezet();
-//        KonzolNezet view = new KonzolNezet();
+        TablazatNezet tView = new TablazatNezet();
+        KonzolNezet kView = new KonzolNezet();
 //        new TablazatNezet(modell).megjelenit();
 //        new TxtNezet(modell).megjelenit();
         
 //        String s = new HtmlNezet(modell).megjelenit();
 //        Files.writeString(Path.of("filmek.html"), s);
 
-        /*KonzolController controller = new KonzolController(modell, view);
+        KonzolController kController = new KonzolController(modell, kView);
         System.out.println("Filmek:");
-        controller.osszesFilmKiirasa();
+        kController.filmMegjelenit();
         
-        System.out.println("A leghosszabb film címe:");
-        controller.leghosszabbFilmCime();*/
-        
-        TablazatController controller = new TablazatController(modell, view);
-        controller.filmKiir();
+        System.out.println("");
+                
+        TablazatController tController = new TablazatController(modell, tView);
+        tController.filmMegjelenit();
     }
     
 }
