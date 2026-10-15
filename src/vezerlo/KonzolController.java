@@ -12,11 +12,11 @@ import nezet.KonzolNezet;
  *
  * @author BernáthMilán(SZF_N_2
  */
-public class Controller {
+public class KonzolController {
     private Filmek filmek;
     private KonzolNezet konzolNezet;
 
-    public Controller(Filmek filmek, KonzolNezet konzolNezet) {
+    public KonzolController(Filmek filmek, KonzolNezet konzolNezet) {
         this.filmek = filmek;
         this.konzolNezet = konzolNezet;
     }
